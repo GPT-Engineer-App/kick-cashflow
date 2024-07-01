@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { DatePickerDemo } from "@/components/ui/date-picker";
+import { Calendar } from "@/components/ui/calendar";
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
@@ -56,7 +56,8 @@ const Index = () => {
           <div className="space-y-4">
             <div>
               <Label htmlFor="date">Date</Label>
-              <DatePickerDemo
+              <Calendar
+                mode="single"
                 selected={newTransaction.date}
                 onSelect={(date) => handleSelectChange(date, "date")}
               />
